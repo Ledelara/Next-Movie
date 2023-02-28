@@ -1,0 +1,174 @@
+:root {
+    --font-family: "Golos Text";
+    --font-size: 18px;
+    --white: #ffffff;
+    --black: #000000;
+    --brown: #3D0000;
+    --maroon: #950101;
+    --red: #FF0000;
+    --purple: #2D033B;
+    --purple-2: #810CA8;
+    --pink: #C147E9;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background: var(--pink);
+}
+
+.header {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 2em;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+} 
+
+#btnMenu {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.5s;
+    text-decoration: underline;
+}
+
+#btnMenu:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--purple-2);
+}
+
+#btnMenu:active {
+    background-color: var(--black);
+}
+
+#btnClose {
+    padding: 8px;
+    background-color: var(--maroon);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+#btnClose:active {
+    background-color: var(--maroon);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: var(--menu-size);
+    height: 100%;
+    background-color: var(--purple-2);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: block;
+}
+
+.menu ul li a {
+    transition: background 0.3s;
+    display: block;
+    color: var(--white);
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.menu ul li a:hover {
+    background-color: var(--purple);
+}
+
+.effect {
+    transition: margin 0.4s;
+}
+
+.lancamentos, .emAlta, .terror {
+    padding: 1em 2em;
+    background-color: var(--purple);
+    margin: 1em 2em;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 1em 0; 
+}
+
+.container-titulo {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.filmes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filme-img {
+    width: 140px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.filme-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.filme-titulo {
+    text-align: center;
+    padding: 0.5em 0;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.footer-container {
+    padding: 2em;
+    background-color: var(--purple);
+}
+
+.footer-titulo {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+@media screen and (max-width: 720px) {
+    .filmes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .filme-container {
+        padding: 1em 0;
+    }
+
+    .filme-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+    .filme-titulo {
+        font-size: 16px;
+    }
+
+}
